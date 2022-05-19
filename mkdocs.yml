@@ -3,10 +3,12 @@ theme: readthedocs
 nav:
 - Home: index.md
 - Configuration: config.md
+- Compatibility: compat.md
 - Frequently Asked Questions: faq.md
 - Extending GEF: api.md
 - Features: commands.md
 - Screenshots: screenshots.md
+- Testing: testing.md
 - Command aliases: commands/aliases.md
 - Command aslr: commands/aslr.md
 - Command assemble: commands/assemble.md

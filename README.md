@@ -7,19 +7,19 @@
 
 ## Instant Setup ##
 
-Simply make sure you have [GDB 7.7 or higher](https://www.gnu.org/s/gdb) compiled with Python3 bindings, then:
+Simply make sure you have [GDB 8.0 or higher](https://www.gnu.org/s/gdb) compiled with Python3.6+ bindings, then:
 
 
 ```bash
 # via the install script
 ## using curl
-$ bash -c "$(curl -fsSL http://gef.blah.cat/sh)"
+$ bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 
 ## using wget
-$ bash -c "$(wget http://gef.blah.cat/sh -O -)"
+$ bash -c "$(wget https://gef.blah.cat/sh -O -)"
 
 # or manually
-$ wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
+$ wget -O ~/.gdbinit-gef.py -q https://gef.blah.cat/py
 $ echo source ~/.gdbinit-gef.py >> ~/.gdbinit
 
 # or alternatively from inside gdb directly
@@ -27,7 +27,7 @@ $ gdb -q
 (gdb) pi import urllib.request as u, tempfile as t; g=t.NamedTemporaryFile(suffix='-gef.py'); open(g.name, 'wb+').write(u.urlopen('https://tinyurl.com/gef-master').read()); gdb.execute('source %s' % g.name)
 ```
 
-_Note_: to fetch the latest of GEF (i.e. from the `dev` branch), simply replace in the URL to http://gef.blah.cat/dev.
+_Note_: to fetch the latest of GEF (i.e. from the `dev` branch), simply replace in the URL to https://gef.blah.cat/dev.
 
 You can immediately see that GEF is correctly installed by launching GDB:
 
@@ -85,19 +85,9 @@ Unlike other GDB plugins, GEF has an extensive and up-to-date [documentation](ht
 
 To get involved, refer to the [Contribution documentation](https://gef.readthedocs.io/en/master/#contribution) and the [guidelines](https://github.com/hugsy/gef/blob/dev/.github/CONTRIBUTING.md) to start.
 
-
 ## Sponsors ##
 
-We would like to thank in particular the following people who've been sponsoring GEF allowing us to dedicate more time and resources to the project:
-
- - [@nkaretnikov](https://github.com/nkaretnikov)
- - [@R3zk0n](https://github.com/r3zk0n)
- - [@merces](https://github.com/merces)
- - [@nbars](https://github.com/nbars)
- - [@maycon](https://github.com/maycon)
+Another way to contribute to keeping the project alive is by sponsoring it! Check out [the sponsoring documentation](https://gef.readthedocs.io/en/master/#sponsors) for details so you can be part of the list of those [awesome sponsors](https://github.com/sponsors/hugsy).
 
 
-Want to be part of this list of amazing people? [Jump here!](https://github.com/sponsors/hugsy)
-
-
-### Happy Hacking ###
+## Happy Hacking   ##

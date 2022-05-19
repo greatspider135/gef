@@ -6,8 +6,9 @@ A simple recent GDB compiled with Python scripting support will do.
 
 ### Prerequisites
 
-Only [GDB 7.7 and higher](https://www.gnu.org/s/gdb) is required. It must be
-compiled with Python 3 support.
+Only [GDB 8 and higher](https://www.gnu.org/s/gdb) is required. It must be
+compiled with Python 3.6 or higher support. For most people, simply using your
+distribution package manager should be enough.
 
 As of January 2020, GEF officially doesn't support Python 2 any longer, due to
 Python 2 becoming officially deprecated.
@@ -52,13 +53,13 @@ the latest, though you're more likely to encounter a bug.
 ```bash
 # via the install script
 ## using curl
-$ bash -c "$(curl -fsSL http://gef.blah.cat/sh)"
+$ bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 
 ## using wget
-$ bash -c "$(wget http://gef.blah.cat/sh -O -)"
+$ bash -c "$(wget https://gef.blah.cat/sh -O -)"
 
 # or manually
-$ wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
+$ wget -O ~/.gdbinit-gef.py -q https://gef.blah.cat/py
 $ echo source ~/.gdbinit-gef.py >> ~/.gdbinit
 ```
 
